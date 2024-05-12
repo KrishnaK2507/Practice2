@@ -1,0 +1,56 @@
+*{
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-name:boxMove;
+    animation-duration: 12s;
+    transition: all linear;
+}
+
+@keyframes boxMove{
+    0%{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    25%{
+        margin-top: 0;
+        margin-left: calc(100% - 100px);
+        border-top-left-radius:50px;
+        border-top-right-radius:0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    50%{
+        margin-top: calc(100vh - 100px);
+        margin-left: calc(100% - 100px);
+        border-top-left-radius:50px;
+        border-top-right-radius:50px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    75%{
+        margin-top:calc(100vh - 100px);
+        margin-left: 0;
+        border-top-left-radius:50px;
+        border-top-right-radius:50px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 0;
+    }
+    100%{
+        margin-top: 0;
+        margin-left: 0;
+        border-top-left-radius:50px;
+        border-top-right-radius:50px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+}
+
+
+
